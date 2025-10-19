@@ -1,5 +1,5 @@
 # Sources and objects
-SRC 	= $(wildcard src/*.c)
+SRC 	= $(wildcard src/str/*.c)
 
 OBJ     = $(SRC:.c=.o)
 

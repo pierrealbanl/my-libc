@@ -17,13 +17,17 @@ char *strsubstr(char *str, const char *subStr) {
     size_t j = 0;
     size_t indexTemp = 0;
 
+    if (str == NULL || subStr == NULL)
+        return NULL;
     if (subStr[0] == '\0')
         return str;
     for (size_t i = 0; str[i] != '\0'; i++) {
         indexTemp = i;
-        for (; str[indexTemp] == subStr[j]; indexTemp++ && j++)
+        while (str[indexTemp] == subStr[j]) {
             if (subStr[j + 1] == '\0')
                 return &str[i];
+            indexTemp++; j++;
+        }
         j = 0;
     }
     return NULL;
