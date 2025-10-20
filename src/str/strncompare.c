@@ -1,10 +1,13 @@
-/* Compares two strings up to a maximum of n characters.
- * If either string is NULL, the function returns 84.
+/* Contains the "strncompare" function, which compares
+ * two strings up to a maximum of n characters.
+ * The comparison stops if a difference is found, if the
+ * end of one of the strings is reached, or if n characters
+ * have been compared. If one of the strings is NULL, the
+ * function returns 84.
  *
- * It returns the difference between the first differing
- * characters, or 0 if the first n characters are identical
- * or if the end of at least one string is reached
- * before that.
+ * Returns the numerical difference between the first differing
+ * characters, 0 if both strings are identical up to n characters,
+ * or 84 if one of the input strings is NULL.
  */
 
 #include "../../include/str.h"
