@@ -14,10 +14,10 @@ int strcompare(const char *str1, const char *str2) {
 
     if (str1 == NULL || str2 == NULL)
         return 84;
-    for (size_t i = 0; str1[i] != '\0' && str2[i] != '\0'; i++) {
-        if (strlength(str1) != strlength(str2))
+    for (size_t i = 0; str1[i] != '\0' || str2[i] != '\0'; i++) {
+        if (str1[i] < str2[i])
             return -1;
-        if (str1[i] != str2[i])
+        if (str1[i] > str2[i])
             return 1;
     }
     return 0;
