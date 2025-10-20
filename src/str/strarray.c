@@ -12,7 +12,7 @@
 
 static size_t rowlength(const char *str) {
 
-    size_t count = 0;
+    int count = 0;
 
     for (int i = 0; str[i] != '\0'; i++) {
         if ((str[i] >= 33 && str[i] <= 126) &&
